@@ -1,3 +1,9 @@
+# Install
+```
+pip install git+https://github.com/felixhummel/poor-mans-dyndns.git@main
+```
+
+
 # Usage
 ```
 pmdd zones
