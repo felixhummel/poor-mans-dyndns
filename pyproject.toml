@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poor-mans-dyndns"
+version = "1"
+authors = [
+    {name = "Felix Hummel", email = "felix@felixhummel.de"},
+]
+requires-python = ">=3.9"
+dependencies = [
+    "click",
+    "httpx",
+]
+
+[project.scripts]
+dyndns-hcloud = "pmdd.cli:main"
+
+
+[project.optional-dependencies]
+dev = [
+    "bump2version",
+    "cython",  # for pycharm debugger extensions
+    "ipython",
+    "mypy",
+    "pip-tools",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+    "ruff",
+]
+
+
+[tool.setuptools]
+packages = ["pmdd"]
+
+[tool.ruff]
+line-length = 79
