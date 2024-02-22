@@ -5,7 +5,11 @@ pip install git+https://github.com/felixhummel/poor-mans-dyndns.git@main
 
 
 # Usage
+First, [get a Hetzner DNS API access token][api-access-token].
+
+[api-access-token]: https://docs.hetzner.com/dns-console/dns/general/api-access-token/
 ```
+export HETZNER_DNS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 pmdd zones
 pmdd set a-record --zone-id xxxxxxxxxxxxxxxxxxxxxx --name home
 ```
