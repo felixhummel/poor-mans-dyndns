@@ -12,10 +12,12 @@ requires-python = ">=3.9"
 dependencies = [
     "click",
     "httpx",
+    "pydantic",
+    "structlog",
 ]
 
 [project.scripts]
-dyndns-hcloud = "pmdd.cli:main"
+pmdd = "pmdd.cli:root"
 
 
 [project.optional-dependencies]
