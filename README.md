@@ -21,6 +21,11 @@ export PMDD_NAME=home
 pmdd set a-record
 ```
 
+Overriding the URL to get ip v4:
+```
+export PMDD_IP_URL=https://ip.hetzner.com
+```
+
 
 # cron
 ```
