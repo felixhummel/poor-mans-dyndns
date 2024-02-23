@@ -35,4 +35,4 @@ class HetznerDNS:
         if existing is None:
             return self.api.create_record(zone_id, name, ip)
         else:
-            return self.api.update_record(existing, name, ip)
+            return self.api.update_record(existing, ip)

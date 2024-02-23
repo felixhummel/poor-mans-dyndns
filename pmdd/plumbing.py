@@ -45,11 +45,11 @@ class HetznerDNSAPI:
         log.debug(method)
         log.debug(path)
         log.debug(payload)
+        response = self.client.request(method, path, json=payload)
         try:
-            response = self.client.request(method, path, json=payload)
             response.raise_for_status()
             return response
-        except httpx.HTTPError as e:
+        except httpx.HTTPError:
             log.error(response.text)
             raise
 
@@ -69,7 +69,7 @@ class HetznerDNSAPI:
             'ttl': self.TTL,
         })
 
-    def update_record(self, record: Record, name, ip):
+    def update_record(self, record: Record, ip):
         record_id = record.id
         path = f'/records/{record_id}'
         return self.put(path, {

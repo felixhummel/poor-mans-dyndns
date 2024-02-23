@@ -32,3 +32,12 @@ PMDD_ZONE_ID=xxxxxxxxxxxxxxxxxxxxxx PMDD_NAME=home pmdd update
 - https://pypi.org/project/hetzner-dns-tools/
 - https://github.com/filiparag/hetzner_ddns
 
+
+
+# Felix' Cheatsheet
+```
+export HETZNER_DNS_TOKEN=$(pass felix/hetzner/dns-token)
+export PMDD_ZONE_ID=$(pass hacks/pmdd/test/zone-id)
+export PMDD_NAME=$(pass hacks/pmdd/test/name)
+make
+```
