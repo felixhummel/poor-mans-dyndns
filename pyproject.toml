@@ -3,7 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "poor-mans-dyndns"
+name = "pmdd"
+description = "Poor man's DynDns"
 version = "1"
 authors = [
     {name = "Felix Hummel", email = "felix@felixhummel.de"},
