@@ -36,6 +36,21 @@ export PMDD_IP_URL=https://ip.hetzner.com
 ```
 
 
+# Bash Completion
+```
+d=${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion
+f=$d/pmdd-complete.bash
+echo $f
+mkdir -p $d
+_PMDD_COMPLETE=bash_source pmdd > $f
+source $f
+```
+
+See
+https://click.palletsprojects.com/en/8.1.x/shell-completion/#enabling-completion
+for more shells.
+
+
 # cron
 ```
 PMDD_ZONE_ID=xxxxxxxxxxxxxxxxxxxxxx PMDD_NAME=home pmdd update
