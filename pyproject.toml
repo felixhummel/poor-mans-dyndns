@@ -33,6 +33,7 @@ dev = [
     "pytest-cov",
     "pytest-xdist",
     "ruff",
+    "uv",
 ]
 
 
