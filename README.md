@@ -21,6 +21,15 @@ export PMDD_NAME=home
 pmdd set a-record
 ```
 
+Using `.env`:
+```
+cat <<'EOF' > .env
+HETZNER_DNS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+PMDD_ZONE_ID=xxxxxxxxxxxxxxxxxxxxxx
+PMDD_NAME=home
+EOF
+```
+
 Overriding the URL to get ip v4:
 ```
 export PMDD_IP_URL=https://ip.hetzner.com

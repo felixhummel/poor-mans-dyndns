@@ -1,6 +1,7 @@
 import logging
 
 import click
+import dotenv
 
 from .ip import get_ipv4
 from .porcellain import HetznerDNS
@@ -9,6 +10,8 @@ LOG_LEVELS = ['CRITICAL', 'FATAL', 'ERROR', 'WARN', 'WARNING', 'INFO', 'DEBUG']
 
 logging.basicConfig()
 log = logging.getLogger()
+
+dotenv.load_dotenv()
 dns = HetznerDNS.from_environ()
 
 
